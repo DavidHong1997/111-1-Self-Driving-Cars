@@ -1,0 +1,69 @@
+---
+argo_data:
+    root: ./data/argo-motion-dataset/
+
+kf_data:
+    root: ./data/kung-fu-motion-dataset/
+    tracking: ./data/kung-fu-motion-dataset/tracking
+    map: ./data/kung-fu-motion-dataset/semantic_map
+
+repo:
+  ckpt_dir: ./weights/ 
+
+optimizer:
+  type: adam
+  warmup_epoch: 1
+  lr: 1e-4
+  wd: 1e-5
+
+scheduler:
+  type: explr
+  gamma: 1
+
+trainer: 
+  save_top_k: 3
+  max_epochs: 100
+  batch_size: 24
+
+net:
+  in_dim: 6
+  out_dim: 5
+  hidden_dim: 128
+  output_heads: 6
+
+criterion:
+  traj_beta: 1
+  conf_alpha: 10
+
+constant:
+  time_horizon: 6
+  obs_steps: 50
+  pred_steps: 60
+  total_steps: 110
+
+plot:
+    bg:
+        color: '#FFFFFF'
+    lane: 
+        color: '#0A1931' 
+        lw: 1
+        alpha: 0.9
+    lane_polygon: 
+        color: dimgray
+        lw: 1.5
+        alpha: 0.9
+    history: 
+        color: green
+        lw: 2.0
+    gt: 
+        color: green
+        lw: 5.0
+        alpha: 0.6
+    goal:
+        color: gold
+        lw: 2.0
+        alpha: 1
+    traj: 
+        color: crimson
+        lw: 2.0
+        alpha: 1

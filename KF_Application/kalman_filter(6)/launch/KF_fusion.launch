@@ -1,0 +1,6 @@
+<launch>
+    <param name="use_sim_time" value="true" /> 
+    <node pkg="rviz"    type="rviz" name="rviz" args="-d $(find kalman_filter)/rviz_config/rviz_config.rviz"/>
+    <arg name="data_path"        default="/home/ee904/SDC/hw4/src/data/sdc_hw4_noetic.bag"/>
+    <node pkg ="kalman_filter"   type="fusion.py" name="Kalman2D_fusion"   output="screen"/>
+</launch>

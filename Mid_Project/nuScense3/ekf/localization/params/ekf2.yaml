@@ -1,0 +1,33 @@
+frequency: 100
+two_d_mode: true
+
+map_frame: world
+odom_frame: origin
+base_link_frame: car
+world_frame: origin
+
+publish_tf: true # new
+
+
+odom0: wheel_odometry
+odom0_config: [false, false, false,
+               false, false, false,
+               true,  true,  true,
+               false, false, true,
+               false, false, false]
+odom0_queue_size: 100
+
+imu0: imu/data
+imu0_config: [false, false,  false,
+               true,  true,   true,
+              false, false,  false,
+               true,  true,   true,
+               true,  true,   true]
+imu0_queue_size: 1000
+
+
+#[   x,       y,    z,
+#  roll,  pitch,  yaw,
+#   V_x,    V_y,  V_z,
+#   W_r,    W_p,  W_y,
+#   a_x,    a_y,  a_z]
