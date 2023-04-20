@@ -6,7 +6,7 @@
 * Motion prediction
 * Final Project: Tracking
 
-###### Kalman_filter (Implement)
+### Kalman_filter (Implement)
 
 Init state
 
@@ -79,7 +79,7 @@ Result Q, R matrix design
 ![kalman](./Kalman_filter/latex/Figure_1.png)
 
 
-###### Kalman_Application real data (Implement)
+### Kalman_Application real data (Implement)
 
 實際將Kalman filter 運行實際資料在ROS上，資料中分為GPS及Radar odom，以高更新率odom最為Predict，而GPS低更新率作為Update，將兩種資料作Sensor Fusion(Kalman Filter)，獲得較精準定位資料。
 
@@ -92,7 +92,7 @@ Real data running in Rziz:
 
 ![KF_app](./KF_Application/latex/predict_3.png)
 
-###### Mid Project : SLAM Localization
+### Mid Project : SLAM Localization
 
 目標：實際實踐基礎SLAM定位演算法，並設計方法提升定位精準度。  
 SLAM 定位流程  
@@ -114,13 +114,13 @@ SLAM 定位流程
 
 ![SLAM](./Mid_Project/latex/SLAM.png)
 
-###### Motion prediction
+### Motion prediction
 Model Design: Model 中 Baseline 參考文獻設計，建立高精地圖特徵 MapNet 使用向量化地圖建構車道圖，而文獻中以 LaneGCN 方法輸出地圖特徵，結合周遭動態特徵及車道特徵進行動態預測，而在本次車道與周圍關係 以文獻VectorNet 方法將高經地圖特徵與車道及周圍動態融合，VectorNet 將同一元素以向量組成行成一條 poyline 將多個 polylines 行成 Subgraph，將所有軌跡和地圖特徵全局分析。
 
 
 (說明參考：Motion_pred_hw6.pdf)
 
-###### Final Projection:Tracking
+### Final Projection:Tracking
 
 (說明參考：Final_projection.pdf)
 
